@@ -1,0 +1,42 @@
+body {
+    display: flex; /* Enable flexbox */
+    flex-direction: column; /* Arrange items in a column */
+    justify-content: center; /* Center items vertically */
+    align-items: center; /* Center items horizontally */
+    height: 100vh; /* Make the body take the full viewport height */
+    margin: 0; /* Remove default margin */
+    background-color: black;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+  
+canvas {
+  border: 20px solid white; 
+  padding-left: 0;
+  padding-right: 0;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+}
+
+h1, h2, h3, h4, h5 {
+  color: white;
+  text-align: center;
+}
+
+button {
+  display: block;
+  color: rgb(0, 0, 0);
+  padding: 5px 10px;
+  border: none;
+  border-radius: 5px;
+  margin-bottom: 10px;
+  background-color: #008a00;
+  cursor: pointer;
+  font-size: large;
+  display: block;
+  margin: 0 auto; /* Center horizontally */
+}
+
+#imgsource {
+  display: none;
+}
