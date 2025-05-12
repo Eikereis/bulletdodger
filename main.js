@@ -91,7 +91,7 @@ class Enemy {
         this.w = 30;
         this.h = 30;
         this.bullets = [];
-        this.speed = 3; // Speed of the horizontal movement
+        this.speed = 88; // Speed of the horizontal movement
         this.attackMode = 3; // Current attack mode
         this.attackTimer = 0; // Timer to track attack mode changes
 
@@ -135,19 +135,7 @@ class Enemy {
             const bigBullet = new Bullet(this.x + this.w / 2, this.y + this.h / 2, dx, dy);
             bigBullet.r = 20; // Increase bullet size
             this.bullets.push(bigBullet);
-        } else if (this.attackMode === 6) {
-            // Vertical block attack
-            if (!this.blockActive && !this.blockWarning) {
-                this.rngwall = Math.random();
-                this.blockWarning = true; // Start warning phase
-                this.blockTimer = 180; // 3 seconds warning (180 frames at 60 FPS)
-                
-            } else if (this.blockWarning && this.blockTimer <= 0) {
-                this.blockWarning = false; // End warning phase
-                this.blockActive = true; // Activate block
-                this.blockTimer = 180; // 30 seconds active (1800 frames at 60 FPS)
-            }
-        }
+        } 
     }
 
     update() {
@@ -163,7 +151,7 @@ class Enemy {
             // Update attack mode every 10 seconds
             this.attackTimer++;
             if (this.attackTimer >= 150) { // Assuming 60 FPS, 600 frames = 10 seconds
-                this.attackMode = (this.attackMode % 6) + 1; // Cycle through attack modes (1 to 6)
+                this.attackMode = (this.attackMode % 6) + 1; // Cycle through attacks, 4 + 6 Are Safe to let the bullets pass
                 this.attackTimer = 0; // Reset timer
             }
 
