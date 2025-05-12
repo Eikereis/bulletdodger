@@ -91,7 +91,7 @@ class Enemy {
         this.w = 30;
         this.h = 30;
         this.bullets = [];
-        this.speed = 88; // Speed of the horizontal movement
+        this.speed = 125; // Speed of the horizontal movement
         this.attackMode = 3; // Current attack mode
         this.attackTimer = 0; // Timer to track attack mode changes
 
